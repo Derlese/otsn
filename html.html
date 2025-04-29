@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лоты на отстрел</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        
+        body {
+            background-color: #111;
+            color: #ddd;
+            font-family: 'Press Start 2P', cursive;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(255,0,0,0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(0,0,255,0.1) 0%, transparent 20%);
+        }
+
+        .lot {
+            background-color: #1a1a1a;
+            border: 2px solid #333;
+            border-radius: 0;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 5px 5px 0px #000;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            gap: 25px;
+        }
+
+        .lot::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #ff0000, #770000);
+        }
+
+        .lot-number {
+            font-size: 1.5em;
+            color: #ff5555;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 0 #000;
+        }
+
+        .section-title {
+            font-size: 1.2em;
+            color: #ff5555;
+            margin: 15px 0 5px 0;
+            text-decoration: underline;
+        }
+
+        .target-description, .license-price {
+            font-style: italic;
+            color: #bbb;
+            line-height: 1.5;
+            margin-left: 10px;
+            text-shadow: 1px 1px 1px #000;
+            font-size: 0.8em;
+        }
+
+        .action-button {
+            display: inline-block;
+            background: linear-gradient(to bottom, #ff3333, #880000);
+            color: white;
+            padding: 10px 20px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 0;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.9em;
+            cursor: pointer;
+            text-transform: uppercase;
+            box-shadow: 3px 3px 0 #000;
+            transition: all 0.2s;
+        }
+
+        .action-button:hover {
+            background: linear-gradient(to bottom, #ff0000, #660000);
+            box-shadow: 5px 5px 0 #000;
+            transform: translate(-2px, -2px);
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background-color: #333;
+            margin: 30px 0;
+        }
+
+        /* Стили для изображений */
+        .target-image {
+            width: 300px;
+            height: 250px;
+            background-color: #222;
+            border: 3px solid #444;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 0.8em;
+            flex-shrink: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .target-image::after {
+            content: "ЗАГРУЗИТЕ ФОТО ЦЕЛИ";
+            position: absolute;
+            color: #555;
+        }
+
+        .lot-text {
+            flex: 1;
+        }
+
+        /* Гранжевые эффекты */
+        .grunge-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background: 
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="black" stroke-width="2" stroke-dasharray="5,5"/></svg>') repeat,
+                linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+            mix-blend-mode: overlay;
+        }
+    </style>
+</head>
+<body>
+    <div class="grunge-overlay"></div>
+
+ 
+
+    <div class="lot">
+        <img src="3b6649169a.jpg" class="target-image" alt="Аяцлао Алуня">
+        
+        <div class="lot-text">
+            <div class="lot-number">1 ЛОТ</div>
+            
+            <div class="target-name">Аяцлао Алуня</div>
+            <br>
+            <div class="target-habitat">
+                <strong>Среда обитания:</strong> Бордж Эль Ауа
+            </div>
+            <br>
+            <div class="target-description">
+                <strong>Последний раз был замечен:</strong><br> в районе سوسوكينو هويوكينو <br>
+                <strong>Повадки:</strong> любит срать на чужих участках, перемещается на 4 конечностях, любит пиздить воду у белых людей
+            </div>
+            
+            <div class="license-section">
+                <div class="section-title">ЛИЦЕНЗИЯ НА ОТСТРЕЛ</div>
+                <div class="license-price">150.000р.</div>
+            </div>
+            
+            <button class="action-button">НАЧАТЬ ОТСТРЕЛИВАТЬ</button>
+        </div>
+    </div>
+
+    <div class="lot">
+        <img src="3b6649169a.jpg" class="target-image" alt="Аяцлао Алуня">
+        
+        <div class="lot-text">
+            <div class="lot-number">2 ЛОТ</div>
+            
+            <div class="target-name">Аяцлао Алуня</div>
+            <br>
+            <div class="target-habitat">
+                <strong>Среда обитания:</strong> Бордж Эль Ауа
+            </div>
+            <br>
+            <div class="target-description">
+                <strong>Последний раз был замечен:</strong><br> в районе سوسوكينو هويوكينو <br>
+                <strong>Повадки:</strong> любит срать на чужих участках, перемещается на 4 конечностях, любит пиздить воду у белых людей
+            </div>
+            
+            <div class="license-section">
+                <div class="section-title">ЛИЦЕНЗИЯ НА ОТСТРЕЛ</div>
+                <div class="license-price">150.000р.</div>
+            </div>
+            
+            <button class="action-button">НАЧАТЬ ОТСТРЕЛИВАТЬ</button>
+        </div>
+    </div>
+
+</body>
+</html>
